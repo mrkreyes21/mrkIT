@@ -132,7 +132,7 @@ function App() {
               }`}
             />
             <nav className={`nav ${menuOpen ? 'visible' : ''} ${isScrolled ? (menuOpen ? 'visible' : 'hidden') : ''}`}>
-              <Link to="/" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Home</Link>
+              <Link to="/mrkIT" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Home</Link>
               <Link to="/software" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Software</Link>
               <Link
                 to="#"
@@ -158,7 +158,7 @@ function App() {
 
           <main className="main-content">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/mrkIT" element={<Home />} />
               <Route path="/software" element={<Software />} />
             </Routes>
           </main>

@@ -9,4 +9,5 @@ export default defineConfig({
     tailwindcss()
   ],
   base: '/mrkIT/',
+  assetsInclude: ['**/*.JPEG', '**/*.JPG', '**/*.png', '**/*.gif', '**/*.pdf'], 
 })
