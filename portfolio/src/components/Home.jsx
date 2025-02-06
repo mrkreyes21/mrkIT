@@ -13,6 +13,13 @@ import {
 } from "react-icons/si";
 import { motion, useAnimation } from 'framer-motion';
 import Modal from './Modal';
+import EducationImg1 from '../assets/about/Education.png';
+import HackStreetImg1 from '../assets/about/hack-a-street.JPEG';
+import SurfingImg from '../assets/about/surfing.jpeg';
+import ViganImg from '../assets/about/vigan.jpeg';
+import OrgImg1 from '../assets/about/org.jpg';
+import MarkImg from '../assets/mark.png';
+import Resume from '../assets/Reyes_resume.pdf';
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -98,31 +105,22 @@ const Home = () => {
 
   const cardsData = [
     {
-      images: [
-        "./src/assets/about/Education.png",
-        "./src/assets/about/Education2.png",
-      ],
+      images: [EducationImg1],
       title: "Where I've Learned?",
       desc: "Junior BS Computer Science student at UPLB specializing in Full Stack Development, Machine Learning, and Software Engineering."
     },
     {
-      images: [
-        "./src/assets/about/hack-a-street.JPEG",
-        "./src/assets/about/hack-a-street2.JPEG",
-      ],
+      images: [HackStreetImg1],
       title: "Hands-On Learning",
       desc: "Proficient in Flutter, Firebase, MERN Stack, Java, SQL, Git/GitHub, database design, and UI/UX optimization."
     },
     {
-      images: [
-        "./src/assets/about/surfing.jpeg",
-        "./src/assets/about/vigan.jpeg",
-      ],
+      images: [SurfingImg, ViganImg],
       title: "Life Beyond the Screen",
       desc:"Passionate about traveling, photography, and music, balancing tech with creative pursuits.",
     },
     {
-      images: ["./src/assets/about/org.jpg", "./src/assets/about/org2.jpg"],
+      images: [OrgImg1],
       title: "Belonging & Beyond",
       desc: "Active member of ACSS UPLB and UPLB CAP Corp., engaging in hackathons and industry collaborations."
     },
@@ -172,7 +170,7 @@ const Home = () => {
     <div className="home">
       <div className="me-container">
         <div className="photo-overlay">
-          <img src="./src/assets/mark.png" alt="Mark Reyes" />
+          <img src={MarkImg} alt="Mark Reyes" />
         </div>
         <div className="moving-text-container">
           {Array(2)
@@ -209,7 +207,7 @@ const Home = () => {
           <p>
           A Computer Science undergraduate passionate about leveraging technical expertise to build innovative software solutions. Experienced Full Stack Developer with a background in mobile and web applications using Flutter, Firebase, and the MERN Stack. Dedicated to delivering scalable, user-centric solutions with a keen focus on optimizing UI/UX and resolving design inconsistencies. Strengthened these skills through leading academic projects, taking on leadership roles, and maintaining a deep interest in design principles and user experience.
           </p>
-          <a href="path-to-your-cv.pdf" download>
+          <a href={Resume} download>
             <button className="cv-button">View my CV</button>
           </a>
         </div>
